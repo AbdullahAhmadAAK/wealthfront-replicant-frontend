@@ -72,18 +72,26 @@ code {
 
 .zero-stocks-section {
   display: grid;
-  gap: 20px;
+  gap: 4px 14px;
   padding: 20px 100px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.purple-text {
+  color: rgb(35, 11, 89)
+}
+
 .get-started-btn {
-  background-color: rgb(35, 11, 89);
+  background-color: #4840BB;
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
   font-weight: 500;
   width: fit-content;
+}
+
+.get-started-btn:hover {
+  background-image: linear-gradient(#4840BB, #A15C44) ;
 }
 
 .get-started-btn:hover {
@@ -128,7 +136,7 @@ code {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
   position: absolute;
   top: -45px;
   left: 300px;
@@ -138,36 +146,80 @@ code {
   padding: 200px 0px;
 }
 
+/* Range track */
 input[type="range"] {
-  width: 300px;
+  width: 400px;
   -webkit-appearance: none;
   appearance: none;
   height: 8px;
-  background: #ddd;
   outline: none;
   opacity: 0.7;
   transition: opacity 0.2s;
+  border-radius: 9999px;
+  background-image: linear-gradient(to right, rgb(244, 184, 150), rgb(218, 222, 241));
 }
 
+/* WebKit browsers (Chrome, Safari) */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #4CAF50;
+  background: white;
   cursor: pointer;
   border-radius: 50%;
+  border: 0.8px solid rgba(35, 11, 89, 0.2);
+  transition: border 0.2s;
 }
 
+input[type="range"]::-webkit-slider-thumb:active {
+  border: 2px solid black;
+}
+
+/* Firefox */
 input[type="range"]::-moz-range-thumb {
   width: 25px;
   height: 25px;
   background: #4CAF50;
   cursor: pointer;
   border-radius: 50%;
+  border: 0.8px solid rgba(35, 11, 89, 0.2);
+  transition: border 0.2s;
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  border: 2px solid black;
+}
+
+/* Edge and Internet Explorer */
+input[type="range"]::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.8px solid rgba(35, 11, 89, 0.2);
+  transition: border 0.2s;
+}
+
+input[type="range"]::-ms-thumb:active {
+  border: 2px solid black;
 }
 
 #risk-score {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#portfolio-name {
+  font-size: 16px;
+}
+
+#risk-score-line {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(35, 11, 89);
+  padding-bottom: 6px;
 }

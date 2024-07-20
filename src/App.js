@@ -42,9 +42,9 @@ const App = () => {
         <div className='left-section'>
           
           <div className="slider-container">
-            <div style={{ display: 'flex', justifyContent: "space-between"}}>
+            <div id='risk-score-line'>
               <span id="risk-score">Risk Score: {selectedRiskScore.toFixed(1)}</span>
-              <span>Example Portfolio</span>
+              <span id='portfolio-name'>Example Portfolio</span>
             </div>
             
             <input
@@ -114,8 +114,8 @@ const App = () => {
         <div className='right-section'>
 
           <div className='right-section-info'>
-            <h4 className='text-40 margin-0'>Smarter investing, brilliantly personalized.</h4>
-            <p>Just answer a few questions, and we’ll build you a personalized portfolio of low-cost index funds from up to 17 global asset classes. Our software handles all the trading, rebalancing, and other busywork to help grow your wealth for the long term.</p>
+            <h4 className='text-40 margin-0 purple-text'>Smarter investing, brilliantly personalized.</h4>
+            <p className='purple-text'>Just answer a few questions, and we’ll build you a personalized portfolio of low-cost index funds from up to 17 global asset classes. Our software handles all the trading, rebalancing, and other busywork to help grow your wealth for the long term.</p>
             <button className='get-started-btn'>Get Started</button>
           </div>
           
